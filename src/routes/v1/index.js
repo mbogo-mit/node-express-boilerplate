@@ -1,39 +1,38 @@
 const express = require('express');
-const authRoute = require('./auth.route');
-const userRoute = require('./user.route');
-const docsRoute = require('./docs.route');
-const config = require('../../config/config');
+
+const graphqlscriptsRoute = require('./graphqlscripts.route');
+const awsRoute = require('./aws.route');
+const mongodbRoute = require('./mongodb.route');
+const nextjsRoute = require('./nextjs.route');
+const ledgerRoute = require('./ledger.route');
 
 const router = express.Router();
 
 const defaultRoutes = [
   {
-    path: '/auth',
-    route: authRoute,
+    path: '/graphqlscripts',
+    route: graphqlscriptsRoute,
   },
   {
-    path: '/users',
-    route: userRoute,
+    path: '/aws',
+    route: awsRoute,
   },
-];
-
-const devRoutes = [
-  // routes available only in development mode
   {
-    path: '/docs',
-    route: docsRoute,
+    path: '/mongodb',
+    route: mongodbRoute,
+  },
+  {
+    path: '/nextjs',
+    route: nextjsRoute,
+  },
+  {
+    path: '/ledger',
+    route: ledgerRoute,
   },
 ];
 
 defaultRoutes.forEach((route) => {
   router.use(route.path, route.route);
 });
-
-/* istanbul ignore next */
-if (config.env === 'development') {
-  devRoutes.forEach((route) => {
-    router.use(route.path, route.route);
-  });
-}
 
 module.exports = router;

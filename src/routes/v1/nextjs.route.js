@@ -1,19 +1,25 @@
 const express = require('express');
 const validate = require('../../middlewares/validate');
-const authValidation = require('../../validations/auth.validation');
-const authController = require('../../controllers/auth.controller');
-const auth = require('../../middlewares/auth');
+const validator = require('../../validations/nextjs.validation');
+const controller = require('../../controllers/nextjs.controller');
+const { convertEndpointUrlToObjKeys, traverseObjWithKeys } = require('../../utils/utils');
+// eslint-disable-next-line no-unused-vars
+const logger = require('../../config/logger');
 
 const router = express.Router();
 
-router.post('/register', validate(authValidation.register), authController.register);
-router.post('/login', validate(authValidation.login), authController.login);
-router.post('/logout', validate(authValidation.logout), authController.logout);
-router.post('/refresh-tokens', validate(authValidation.refreshTokens), authController.refreshTokens);
-router.post('/forgot-password', validate(authValidation.forgotPassword), authController.forgotPassword);
-router.post('/reset-password', validate(authValidation.resetPassword), authController.resetPassword);
-router.post('/send-verification-email', auth(), authController.sendVerificationEmail);
-router.post('/verify-email', validate(authValidation.verifyEmail), authController.verifyEmail);
+const endpoints = ['/create/:nextjsname', '/delete/:nextjsnameID', '/:nextjsnameID'];
+
+// convert endpoints to router posts
+
+// eslint-disable-next-line no-unused-vars
+endpoints.map((endpoint, i) => {
+  const keys = convertEndpointUrlToObjKeys(endpoint);
+  const callback = traverseObjWithKeys(controller, keys);
+  // logger.info(`i: ${i} ${callback}`);
+  router.post(endpoint, validate(traverseObjWithKeys(validator, keys)), callback);
+  return null;
+});
 
 module.exports = router;
 
