@@ -15,7 +15,7 @@ const controller = {
       _apigatewayname: catchAsync(async (req, res) => {
         // logger.info(Object.keys(req))
         // logger.info(req.originalUrl)
-        res.status(httpStatus.CREATED).send({ response: { params: req.params } });
+        res.status(httpStatus.CREATED).send({ response: { params: req.params, env: process.env.API72_SECRET_ACCESS_ID } });
       }),
     },
 
@@ -25,7 +25,7 @@ const controller = {
       _websocketname: catchAsync(async (req, res) => {
         // logger.info(Object.keys(req))
         // logger.info(req.originalUrl)
-        res.status(httpStatus.CREATED).send({ response: { params: req.params } });
+        res.status(httpStatus.CREATED).send({ response: { params: req.params, env: process.env.API72_SECRET_ACCESS_ID } });
       }),
     },
   },
@@ -38,7 +38,7 @@ const controller = {
       _apigatewaynameID: catchAsync(async (req, res) => {
         // logger.info(Object.keys(req))
         // logger.info(req.originalUrl)
-        res.status(httpStatus.CREATED).send({ response: { params: req.params } });
+        res.status(httpStatus.CREATED).send({ response: { params: req.params, env: process.env.API72_SECRET_ACCESS_ID } });
       }),
     },
 
@@ -48,7 +48,7 @@ const controller = {
       _websocketnameID: catchAsync(async (req, res) => {
         // logger.info(Object.keys(req))
         // logger.info(req.originalUrl)
-        res.status(httpStatus.CREATED).send({ response: { params: req.params } });
+        res.status(httpStatus.CREATED).send({ response: { params: req.params, env: process.env.API72_SECRET_ACCESS_ID } });
       }),
     },
   },
@@ -65,7 +65,9 @@ const controller = {
           _dynamodbname: catchAsync(async (req, res) => {
             // logger.info(Object.keys(req))
             // logger.info(req.originalUrl)
-            res.status(httpStatus.CREATED).send({ response: { params: req.params } });
+            res
+              .status(httpStatus.CREATED)
+              .send({ response: { params: req.params, env: process.env.API72_SECRET_ACCESS_ID } });
           }),
         },
 
@@ -75,7 +77,9 @@ const controller = {
           _s3name: catchAsync(async (req, res) => {
             // logger.info(Object.keys(req))
             // logger.info(req.originalUrl)
-            res.status(httpStatus.CREATED).send({ response: { params: req.params } });
+            res
+              .status(httpStatus.CREATED)
+              .send({ response: { params: req.params, env: process.env.API72_SECRET_ACCESS_ID } });
           }),
         },
 
@@ -85,7 +89,9 @@ const controller = {
           _lambdaname: catchAsync(async (req, res) => {
             // logger.info(Object.keys(req))
             // logger.info(req.originalUrl)
-            res.status(httpStatus.CREATED).send({ response: { params: req.params } });
+            res
+              .status(httpStatus.CREATED)
+              .send({ response: { params: req.params, env: process.env.API72_SECRET_ACCESS_ID } });
           }),
         },
       },
@@ -98,7 +104,9 @@ const controller = {
           _dynamodbnameID: catchAsync(async (req, res) => {
             // logger.info(Object.keys(req))
             // logger.info(req.originalUrl)
-            res.status(httpStatus.CREATED).send({ response: { params: req.params } });
+            res
+              .status(httpStatus.CREATED)
+              .send({ response: { params: req.params, env: process.env.API72_SECRET_ACCESS_ID } });
           }),
         },
 
@@ -108,7 +116,9 @@ const controller = {
           _s3nameID: catchAsync(async (req, res) => {
             // logger.info(Object.keys(req))
             // logger.info(req.originalUrl)
-            res.status(httpStatus.CREATED).send({ response: { params: req.params } });
+            res
+              .status(httpStatus.CREATED)
+              .send({ response: { params: req.params, env: process.env.API72_SECRET_ACCESS_ID } });
           }),
         },
 
@@ -118,7 +128,9 @@ const controller = {
           _lambdanameID: catchAsync(async (req, res) => {
             // logger.info(Object.keys(req))
             // logger.info(req.originalUrl)
-            res.status(httpStatus.CREATED).send({ response: { params: req.params } });
+            res
+              .status(httpStatus.CREATED)
+              .send({ response: { params: req.params, env: process.env.API72_SECRET_ACCESS_ID } });
           }),
         },
       },
@@ -129,7 +141,7 @@ const controller = {
         _dynamodbnameID: catchAsync(async (req, res) => {
           // logger.info(Object.keys(req))
           // logger.info(req.originalUrl)
-          res.status(httpStatus.CREATED).send({ response: { params: req.params } });
+          res.status(httpStatus.CREATED).send({ response: { params: req.params, env: process.env.API72_SECRET_ACCESS_ID } });
         }),
       },
 
@@ -139,7 +151,7 @@ const controller = {
         _s3nameID: catchAsync(async (req, res) => {
           // logger.info(Object.keys(req))
           // logger.info(req.originalUrl)
-          res.status(httpStatus.CREATED).send({ response: { params: req.params } });
+          res.status(httpStatus.CREATED).send({ response: { params: req.params, env: process.env.API72_SECRET_ACCESS_ID } });
         }),
       },
 
@@ -151,21 +163,27 @@ const controller = {
           read: catchAsync(async (req, res) => {
             // logger.info(Object.keys(req))
             // logger.info(req.originalUrl)
-            res.status(httpStatus.CREATED).send({ response: { params: req.params } });
+            res
+              .status(httpStatus.CREATED)
+              .send({ response: { params: req.params, env: process.env.API72_SECRET_ACCESS_ID } });
           }),
 
           /* /v1/api/aws/apigateway/:apigatewaynameID/lambda/:lambdanameID/update */
           update: catchAsync(async (req, res) => {
             // logger.info(Object.keys(req))
             // logger.info(req.originalUrl)
-            res.status(httpStatus.CREATED).send({ response: { params: req.params } });
+            res
+              .status(httpStatus.CREATED)
+              .send({ response: { params: req.params, env: process.env.API72_SECRET_ACCESS_ID } });
           }),
 
           /* /v1/api/aws/apigateway/:apigatewaynameID/lambda/:lambdanameID/execute */
           execute: catchAsync(async (req, res) => {
             // logger.info(Object.keys(req))
             // logger.info(req.originalUrl)
-            res.status(httpStatus.CREATED).send({ response: { params: req.params } });
+            res
+              .status(httpStatus.CREATED)
+              .send({ response: { params: req.params, env: process.env.API72_SECRET_ACCESS_ID } });
           }),
         },
       },
@@ -178,7 +196,7 @@ const controller = {
     _websocketnameID: catchAsync(async (req, res) => {
       // logger.info(Object.keys(req))
       // logger.info(req.originalUrl)
-      res.status(httpStatus.CREATED).send({ response: { params: req.params } });
+      res.status(httpStatus.CREATED).send({ response: { params: req.params, env: process.env.API72_SECRET_ACCESS_ID } });
     }),
   },
 };

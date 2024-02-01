@@ -13,7 +13,7 @@ const controller = {
     api: catchAsync(async (req, res) => {
       // logger.info(Object.keys(req))
       // logger.info(req.originalUrl)
-      res.status(httpStatus.CREATED).send({ response: { params: req.params } });
+      res.status(httpStatus.CREATED).send({ response: { params: req.params, env: process.env.API72_SECRET_ACCESS_ID } });
     }),
 
     /* /v1/api/ledger/environmentvariables/ec2 */
@@ -22,7 +22,7 @@ const controller = {
       _ec2nameID: catchAsync(async (req, res) => {
         // logger.info(Object.keys(req))
         // logger.info(req.originalUrl)
-        res.status(httpStatus.CREATED).send({ response: { params: req.params } });
+        res.status(httpStatus.CREATED).send({ response: { params: req.params, env: process.env.API72_SECRET_ACCESS_ID } });
       }),
     },
 
@@ -32,7 +32,7 @@ const controller = {
       _apigatewaynameID: catchAsync(async (req, res) => {
         // logger.info(Object.keys(req))
         // logger.info(req.originalUrl)
-        res.status(httpStatus.CREATED).send({ response: { params: req.params } });
+        res.status(httpStatus.CREATED).send({ response: { params: req.params, env: process.env.API72_SECRET_ACCESS_ID } });
       }),
     },
 
@@ -42,7 +42,7 @@ const controller = {
       _websocketnameID: catchAsync(async (req, res) => {
         // logger.info(Object.keys(req))
         // logger.info(req.originalUrl)
-        res.status(httpStatus.CREATED).send({ response: { params: req.params } });
+        res.status(httpStatus.CREATED).send({ response: { params: req.params, env: process.env.API72_SECRET_ACCESS_ID } });
       }),
     },
 
@@ -52,7 +52,7 @@ const controller = {
       _mongodbnameID: catchAsync(async (req, res) => {
         // logger.info(Object.keys(req))
         // logger.info(req.originalUrl)
-        res.status(httpStatus.CREATED).send({ response: { params: req.params } });
+        res.status(httpStatus.CREATED).send({ response: { params: req.params, env: process.env.API72_SECRET_ACCESS_ID } });
       }),
     },
 
@@ -62,7 +62,7 @@ const controller = {
       _nextjsnameID: catchAsync(async (req, res) => {
         // logger.info(Object.keys(req))
         // logger.info(req.originalUrl)
-        res.status(httpStatus.CREATED).send({ response: { params: req.params } });
+        res.status(httpStatus.CREATED).send({ response: { params: req.params, env: process.env.API72_SECRET_ACCESS_ID } });
       }),
     },
   },
@@ -73,7 +73,7 @@ const controller = {
     api: catchAsync(async (req, res) => {
       // logger.info(Object.keys(req))
       // logger.info(req.originalUrl)
-      res.status(httpStatus.CREATED).send({ response: { params: req.params } });
+      res.status(httpStatus.CREATED).send({ response: { params: req.params, env: process.env.API72_SECRET_ACCESS_ID } });
     }),
 
     /* /v1/api/ledger/secrets/ec2 */
@@ -82,7 +82,7 @@ const controller = {
       _ec2nameID: catchAsync(async (req, res) => {
         // logger.info(Object.keys(req))
         // logger.info(req.originalUrl)
-        res.status(httpStatus.CREATED).send({ response: { params: req.params } });
+        res.status(httpStatus.CREATED).send({ response: { params: req.params, env: process.env.API72_SECRET_ACCESS_ID } });
       }),
     },
 
@@ -92,7 +92,7 @@ const controller = {
       _apigatewaynameID: catchAsync(async (req, res) => {
         // logger.info(Object.keys(req))
         // logger.info(req.originalUrl)
-        res.status(httpStatus.CREATED).send({ response: { params: req.params } });
+        res.status(httpStatus.CREATED).send({ response: { params: req.params, env: process.env.API72_SECRET_ACCESS_ID } });
       }),
     },
 
@@ -102,7 +102,7 @@ const controller = {
       _websocketnameID: catchAsync(async (req, res) => {
         // logger.info(Object.keys(req))
         // logger.info(req.originalUrl)
-        res.status(httpStatus.CREATED).send({ response: { params: req.params } });
+        res.status(httpStatus.CREATED).send({ response: { params: req.params, env: process.env.API72_SECRET_ACCESS_ID } });
       }),
     },
 
@@ -112,7 +112,7 @@ const controller = {
       _mongodbnameID: catchAsync(async (req, res) => {
         // logger.info(Object.keys(req))
         // logger.info(req.originalUrl)
-        res.status(httpStatus.CREATED).send({ response: { params: req.params } });
+        res.status(httpStatus.CREATED).send({ response: { params: req.params, env: process.env.API72_SECRET_ACCESS_ID } });
       }),
     },
 
@@ -122,7 +122,7 @@ const controller = {
       _nextjsnameID: catchAsync(async (req, res) => {
         // logger.info(Object.keys(req))
         // logger.info(req.originalUrl)
-        res.status(httpStatus.CREATED).send({ response: { params: req.params } });
+        res.status(httpStatus.CREATED).send({ response: { params: req.params, env: process.env.API72_SECRET_ACCESS_ID } });
       }),
     },
   },
@@ -133,7 +133,7 @@ const controller = {
     api: catchAsync(async (req, res) => {
       // logger.info(Object.keys(req))
       // logger.info(req.originalUrl)
-      res.status(httpStatus.CREATED).send({ response: { params: req.params } });
+      res.status(httpStatus.CREATED).send({ response: { params: req.params, env: process.env.API72_SECRET_ACCESS_ID } });
     }),
 
     /* /v1/api/ledger/events/graphqlscripts */
@@ -142,7 +142,7 @@ const controller = {
       _graphqlscriptsnameID: catchAsync(async (req, res) => {
         // logger.info(Object.keys(req))
         // logger.info(req.originalUrl)
-        res.status(httpStatus.CREATED).send({ response: { params: req.params } });
+        res.status(httpStatus.CREATED).send({ response: { params: req.params, env: process.env.API72_SECRET_ACCESS_ID } });
       }),
     },
 
@@ -152,7 +152,7 @@ const controller = {
       _ec2nameID: catchAsync(async (req, res) => {
         // logger.info(Object.keys(req))
         // logger.info(req.originalUrl)
-        res.status(httpStatus.CREATED).send({ response: { params: req.params } });
+        res.status(httpStatus.CREATED).send({ response: { params: req.params, env: process.env.API72_SECRET_ACCESS_ID } });
       }),
     },
 
@@ -162,7 +162,7 @@ const controller = {
       _apigatewaynameID: catchAsync(async (req, res) => {
         // logger.info(Object.keys(req))
         // logger.info(req.originalUrl)
-        res.status(httpStatus.CREATED).send({ response: { params: req.params } });
+        res.status(httpStatus.CREATED).send({ response: { params: req.params, env: process.env.API72_SECRET_ACCESS_ID } });
       }),
     },
 
@@ -172,7 +172,7 @@ const controller = {
       _websocketnameID: catchAsync(async (req, res) => {
         // logger.info(Object.keys(req))
         // logger.info(req.originalUrl)
-        res.status(httpStatus.CREATED).send({ response: { params: req.params } });
+        res.status(httpStatus.CREATED).send({ response: { params: req.params, env: process.env.API72_SECRET_ACCESS_ID } });
       }),
     },
 
@@ -182,7 +182,7 @@ const controller = {
       _mongodbnameID: catchAsync(async (req, res) => {
         // logger.info(Object.keys(req))
         // logger.info(req.originalUrl)
-        res.status(httpStatus.CREATED).send({ response: { params: req.params } });
+        res.status(httpStatus.CREATED).send({ response: { params: req.params, env: process.env.API72_SECRET_ACCESS_ID } });
       }),
     },
 
@@ -192,7 +192,7 @@ const controller = {
       _nextjsnameID: catchAsync(async (req, res) => {
         // logger.info(Object.keys(req))
         // logger.info(req.originalUrl)
-        res.status(httpStatus.CREATED).send({ response: { params: req.params } });
+        res.status(httpStatus.CREATED).send({ response: { params: req.params, env: process.env.API72_SECRET_ACCESS_ID } });
       }),
     },
   },
@@ -203,7 +203,7 @@ const controller = {
     api: catchAsync(async (req, res) => {
       // logger.info(Object.keys(req))
       // logger.info(req.originalUrl)
-      res.status(httpStatus.CREATED).send({ response: { params: req.params } });
+      res.status(httpStatus.CREATED).send({ response: { params: req.params, env: process.env.API72_SECRET_ACCESS_ID } });
     }),
 
     /* /v1/api/ledger/architecture/ec2 */
@@ -212,7 +212,7 @@ const controller = {
       _ec2nameID: catchAsync(async (req, res) => {
         // logger.info(Object.keys(req))
         // logger.info(req.originalUrl)
-        res.status(httpStatus.CREATED).send({ response: { params: req.params } });
+        res.status(httpStatus.CREATED).send({ response: { params: req.params, env: process.env.API72_SECRET_ACCESS_ID } });
       }),
     },
 
@@ -222,7 +222,7 @@ const controller = {
       _apigatewaynameID: catchAsync(async (req, res) => {
         // logger.info(Object.keys(req))
         // logger.info(req.originalUrl)
-        res.status(httpStatus.CREATED).send({ response: { params: req.params } });
+        res.status(httpStatus.CREATED).send({ response: { params: req.params, env: process.env.API72_SECRET_ACCESS_ID } });
       }),
     },
 
@@ -232,7 +232,7 @@ const controller = {
       _websocketnameID: catchAsync(async (req, res) => {
         // logger.info(Object.keys(req))
         // logger.info(req.originalUrl)
-        res.status(httpStatus.CREATED).send({ response: { params: req.params } });
+        res.status(httpStatus.CREATED).send({ response: { params: req.params, env: process.env.API72_SECRET_ACCESS_ID } });
       }),
     },
 
@@ -242,7 +242,7 @@ const controller = {
       _mongodbnameID: catchAsync(async (req, res) => {
         // logger.info(Object.keys(req))
         // logger.info(req.originalUrl)
-        res.status(httpStatus.CREATED).send({ response: { params: req.params } });
+        res.status(httpStatus.CREATED).send({ response: { params: req.params, env: process.env.API72_SECRET_ACCESS_ID } });
       }),
     },
 
@@ -252,7 +252,7 @@ const controller = {
       _nextjsnameID: catchAsync(async (req, res) => {
         // logger.info(Object.keys(req))
         // logger.info(req.originalUrl)
-        res.status(httpStatus.CREATED).send({ response: { params: req.params } });
+        res.status(httpStatus.CREATED).send({ response: { params: req.params, env: process.env.API72_SECRET_ACCESS_ID } });
       }),
     },
   },
